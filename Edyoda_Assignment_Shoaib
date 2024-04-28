@@ -1,0 +1,22 @@
+Step 1 : Delete Vote Pod 
+	Command Used: kubectl delete pod vote-7d884dd585-hn7jv
+  Output: pod "vote-7d884dd585-hn7jv" deleted
+  Observations:
+                [Before Deleting POD]
+                root@ip-172-31-43-66:~# kubectl get po
+                NAME                      READY   STATUS    RESTARTS   AGE
+                db-58cc845644-jxljz       1/1     Running   0          2d22h
+                redis-6878558678-n6rxx    1/1     Running   0          2d22h
+                result-86bc6f7b5d-kltp6   1/1     Running   0          2d22h
+                vote-7d884dd585-hn7jv     1/1     Running   0          2d22h
+                worker-6fc5d5b668-fpgt9   1/1     Running   0          2d22h
+
+                [After Deleting POD]
+                root@ip-172-31-43-66:~# kubectl get po
+                NAME                      READY   STATUS    RESTARTS   AGE
+                db-58cc845644-jxljz       1/1     Running   0          2d22h
+                redis-6878558678-n6rxx    1/1     Running   0          2d22h
+                result-86bc6f7b5d-kltp6   1/1     Running   0          2d22h
+                vote-7d884dd585-mtgpf     1/1     Running   0          18s
+                worker-6fc5d5b668-fpgt9   1/1     Running   0          2d22h
+
